@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="'en'" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2><%= @figure.name %></h2>
+    <ul>
+      <% @figure.landmarks.each do |lm| %>
+          <li><%= lm.name %></li>
+      <% end %>
+    </ul>
+    <form action="/figures/<%=@figure.id%>/edit" method="get">
+  <input type=submit value="edit"></input>
+</form>
+  </body>
+</html>

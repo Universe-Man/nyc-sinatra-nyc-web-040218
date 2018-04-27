@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="'en'" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Figures</h2>
+    <ul>
+    <% Figure.all.each do |f| %>
+      <br>
+      <li> <%= f.name %> </li>
+      <br>
+        <ul>
+          <% f.landmarks.each do |lm| %>
+            <li><%= lm.name %></li>
+          <% end %>
+        </ul>
+    <% end %>
+    </ul>
+  </body>
+</html>
